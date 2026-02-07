@@ -1,3 +1,52 @@
+# 🤔 Which Model Should I Use? (Quick Decision Guide)
+
+Use this section **first**. It helps you choose the right model based on *what you are building*, before diving into the full reference table.
+
+---
+
+## 🧭 One‑Line Decision Map
+
+```
+Coding / Chat / Presentations  → gpt-4.1
+Advanced Agents / Automation  → gpt-5.2 / gpt-5.2-pro
+Research / Long Analysis      → o3-deep-research
+Images                        → gpt-image-1.5
+Video                         → sora-2 / sora-2-pro
+Speech → Text                 → whisper-1
+Text → Speech                 → tts-1 / tts-1-hd
+Realtime Voice Apps           → gpt-realtime
+Search / RAG                  → text-embedding-3-large
+Safety / Moderation           → omni-moderation-latest
+```
+
+---
+
+## 🎯 Common Student Use Cases
+
+| What are you building? | Start with this model | Why |
+|------------------------|----------------------|-----|
+| Learning to code | gpt-4.1 | Strong explanations + reliable code |
+| Chatbot / Assistant | gpt-4.1 | Natural conversation |
+| Slide decks / Notes | gpt-4.1 | Clear summaries & structure |
+| AI agents | gpt-5.2 | Multi-step reasoning |
+| Research project | o3-deep-research | Document synthesis |
+| Image creation | gpt-image-1.5 | Best visual quality |
+| Voice transcription | whisper-1 | Accurate STT |
+| Voice narration | tts-1-hd | Natural speech |
+| Chat with documents | text-embedding-3-large | Semantic search |
+| Public app safety | omni-moderation-latest | Content filtering |
+
+---
+
+## 🧠 Golden Rules
+
+- Start **simple**, then scale up
+- Bigger models ≠ better results
+- Use **specialized models only when needed**
+- Always include **moderation** for public apps
+
+---
+
 # 📘 OpenAI Models – Detailed Reference
 
 > Source: Official OpenAI Models Documentation  
@@ -47,4 +96,3 @@
 - Start with **gpt-4.1** for most student projects.
 - Use **specialized models** only when required.
 - Some frontier models may have limited availability.
-
