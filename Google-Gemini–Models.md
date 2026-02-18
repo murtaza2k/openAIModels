@@ -1,132 +1,164 @@
-# 🧠 Google Gemini API – Models, Pricing & Free Tier Guide
+# Google Gemini API (2026): Complete Guide to Models, Pricing, Free Tier & Use Cases
 
-A practical reference for choosing the **right Gemini model** for your use case:  
-**code assistants, chatbots, image generation, and embeddings**.
-
-Source: https://ai.google.dev/gemini-api/docs/models.md.txt
+Google’s **Gemini API** has evolved rapidly, introducing **Gemini 3**, improved **Flash models**, and more efficient **image and embedding capabilities**.  
+This article provides a **clear, practical overview** of **all the latest Gemini models**, their **pricing**, **free-tier limits**, and **which model to choose** for real-world use cases.
 
 ---
 
-## 📌 Quick “Which Model Should I Use?”
+## 🚀 What Is Gemini?
 
-| Use Case | Recommended Model |
-|--------|------------------|
-| Code assistant / reasoning | `gemini-2.5-pro` |
-| Production chatbot | `gemini-2.5-flash` |
-| High-scale low-cost chatbot | `gemini-2.5-flash-lite` |
-| Low-latency assistant | `gemini-3-flash-preview` |
-| Image generation | `gemini-2.5-flash-image` |
-| Semantic search / RAG | `gemini-embedding-001` |
+**Gemini** is Google’s multimodal large language model family that supports:
+- Text
+- Code
+- Images
+- Multimodal reasoning
+- Large context windows (up to **1 million tokens**)
+
+Gemini models are accessible via:
+- **Google AI Studio**
+- **Gemini API**
+- **Vertex AI (Enterprise)**
 
 ---
 
-## 🆓 Free Tier & Rate Limits (Overview)
+## 🆓 Gemini API Free Tier Explained
 
-Google Gemini API provides a **free tier** (no credit card required) for testing and prototyping.
+Google offers a **free tier** for Gemini API, making it easy to experiment without a credit card.
 
-### Free Tier Characteristics
+### Free Tier Includes
 - Limited **Requests Per Minute (RPM)**
 - Limited **Tokens Per Minute (TPM)**
-- Daily request caps
+- Daily usage caps
 - Shared quota across models
 
-> ⚠️ Exact limits vary by model and may change.  
-> Always check **Google AI Studio → Quotas** for real values.
+### Typical Free Tier Limits (Approximate)
 
-### Typical Free Tier Limits (Indicative)
-
-| Metric | Free Tier |
-|-----|----------|
-| Requests per minute | ~5–15 RPM |
+| Limit Type | Free Tier |
+|-----------|----------|
+| Requests per minute | 5–15 RPM |
 | Tokens per minute | ~250,000 TPM |
 | Daily requests | Limited |
 | Production SLA | ❌ No |
 
-### Paid Tier Benefits
-- Much higher RPM / TPM
-- Stable production throughput
-- Billing-based scaling
-- Required for serious production workloads
+> ⚠️ Limits vary by model and may change.  
+> Always check **Google AI Studio → Quotas** for live values.
+
+### When to Enable Billing
+Enable billing when you need:
+- Stable production traffic
+- Higher throughput
+- Consistent latency
+- Enterprise-grade reliability
+
+---
+
+## 🧠 Latest Gemini Models (2026)
+
+Below is the **complete and up-to-date Gemini API model list**, including **Gemini 3**, **2.5**, image models, and embeddings.
 
 ---
 
 ## 📊 Gemini API Models – Full Reference Table
 
-| API Model ID | Display Name | Description | Primary Use Cases | Free Tier | Paid Pricing (per 1M tokens) |
-|-------------|-------------|-------------|------------------|----------|------------------------------|
-| `gemini-3-pro-preview` | Gemini 3 Pro (Preview) | Most powerful multimodal reasoning model | Deep reasoning, large context analysis, research | Limited | Input $2–$4 / Output $12–$18 |
-| `gemini-3-flash-preview` | Gemini 3 Flash (Preview) | Low-latency, fast multimodal model | Real-time chat, agents | ✅ Yes | Input $0.50 / Output $3.00 |
-| `gemini-3-pro-image-preview` | Gemini 3 Pro Image | Image generation & multimodal | High-quality image generation | Limited | Text $2 / Image priced separately |
-| `gemini-2.5-pro` | Gemini 2.5 Pro | High-end reasoning & coding model (1M context) | Code assistants, logic, analysis | ✅ Yes | Input $1.25–$2.50 / Output $10–$15 |
-| `gemini-2.5-flash` | Gemini 2.5 Flash | Balanced cost & performance | Chatbots, assistants, workflows | ✅ Yes | Input ~$0.30 / Output ~$2.50 |
-| `gemini-2.5-flash-image` | Gemini 2.5 Flash Image | Text-to-image generation | Image generation apps | Limited | Flash pricing + image tokens |
-| `gemini-2.5-flash-lite` | Gemini 2.5 Flash-Lite | Ultra-low cost, high throughput | Large-scale bots | ✅ Yes | Input $0.10 / Output $0.40 |
-| `gemini-embedding-001` | Gemini Embedding | Embedding / vector model | Semantic search, RAG | ✅ Yes | Input $0.15 |
+| Model ID | Display Name | Description | Best For | Free Tier | Pricing (per 1M tokens) |
+|--------|-------------|------------|---------|----------|-------------------------|
+| `gemini-3-pro` | Gemini 3 Pro | Most powerful multimodal reasoning model | Deep reasoning, coding, planning | Limited | Input ~$2–$4 / Output ~$12–$18 |
+| `gemini-3-flash` | Gemini 3 Flash | Fast, low-latency high-performance model | Real-time chat, agents | ✅ Yes | Lower than Pro |
+| `gemini-3-deepthink` | Gemini 3 DeepThink | Enhanced reasoning variant | Multi-step logical reasoning | Limited | Similar to Pro |
+| `gemini-3-pro-image` | Gemini 3 Pro Image | High-quality image generation | Premium image creation | Limited | Image-based pricing |
+| `gemini-2.5-pro` | Gemini 2.5 Pro | Mature reasoning & coding model (1M context) | Code assistants, analysis | ✅ Yes | Input $1.25–$2.50 / Output $10–$15 |
+| `gemini-2.5-flash` | Gemini 2.5 Flash | Balanced cost/performance | Production chatbots | ✅ Yes | Input ~$0.30 / Output ~$2.50 |
+| `gemini-2.5-flash-lite` | Gemini 2.5 Flash-Lite | Ultra low-cost, high throughput | Large-scale bots | ✅ Yes | Input $0.10 / Output $0.40 |
+| `gemini-2.5-flash-image` | Gemini 2.5 Flash Image | Text-to-image generation | Image apps | Limited | Flash pricing + image tokens |
+| `gemini-embedding-001` | Gemini Embedding | Vector embeddings model | RAG, semantic search | ✅ Yes | ~$0.15 |
+| `gemini-2.0-flash` | Gemini 2.0 Flash | Legacy general model | Simple workloads | ✅ Yes | Low |
+| `gemini-2.0-flash-lite` | Gemini 2.0 Flash-Lite | Legacy ultra-cheap model | Massive scale | ✅ Yes | Lowest |
 
 ---
 
-## 🧑‍💻 Best Models for Code Assistants
+## 🎯 Which Gemini Model Should You Use?
 
-| Model | Why Use It |
-|-----|------------|
-| `gemini-2.5-pro` | Strong reasoning, large context, best for coding |
-| `gemini-3-pro-preview` | Frontier reasoning (preview only) |
+### 🧑‍💻 Code Assistants & Reasoning
+**Best models:**
+- `gemini-3-pro`
+- `gemini-2.5-pro`
 
-✔ Recommended for IDE helpers, debugging, API design, architecture reasoning.
-
----
-
-## 💬 Best Models for Chatbots
-
-| Model | Scenario |
-|-----|---------|
-| `gemini-2.5-flash` | General-purpose chatbot |
-| `gemini-2.5-flash-lite` | Massive scale, low cost |
-| `gemini-3-flash-preview` | Ultra-responsive assistants |
-
-✔ Most production chatbots should start with **2.5 Flash**.
+Use these for:
+- IDE copilots
+- Debugging
+- Architecture reasoning
+- API design
 
 ---
 
-## 🖼️ Best Models for Image Generation
+### 💬 Chatbots & Conversational AI
+**Best models:**
+- `gemini-2.5-flash` (recommended)
+- `gemini-2.5-flash-lite` (high scale)
+- `gemini-3-flash` (low latency)
 
-| Model | Scenario |
-|-----|---------|
-| `gemini-2.5-flash-image` | Cost-effective image generation |
-| `gemini-3-pro-image-preview` | Highest quality images |
-
-✔ Image pricing depends on resolution & output tokens.
-
----
-
-## 📌 Best Models for Embeddings & RAG
-
-| Model | Use |
-|-----|-----|
-| `gemini-embedding-001` | Vector search, semantic similarity, RAG |
-
-✔ Works well with **FAISS, Pinecone, Weaviate, Milvus**.
+Most production chatbots should start with **2.5 Flash**.
 
 ---
 
-## 🔐 Production Recommendation
+### 🖼️ Image Generation
+**Best models:**
+- `gemini-3-pro-image` (highest quality)
+- `gemini-2.5-flash-image` (cost-effective)
+
+Ideal for:
+- Text-to-image
+- Image editing
+- Multimodal creative apps
+
+---
+
+### 🔍 Embeddings, Search & RAG
+**Best model:**
+- `gemini-embedding-001`
+
+Use with:
+- FAISS
+- Pinecone
+- Weaviate
+- Milvus
+
+Perfect for:
+- Healthcare RAG
+- Document search
+- Knowledge assistants
+
+---
+
+## 🔐 Production Recommendations
 
 | Environment | Recommendation |
-|-----------|----------------|
-| Prototyping | Free tier |
-| Internal tools | Flash / Flash-Lite |
-| Production | Paid tier + quotas |
-| Healthcare / enterprise | Paid tier + GCP controls |
+|------------|---------------|
+| Learning & testing | Free tier |
+| Internal tools | Gemini Flash |
+| Public apps | Paid tier |
+| Healthcare / enterprise | Vertex AI + billing |
 
 ---
 
-## 📎 References
+## 🏁 Final Thoughts
+
+Google Gemini has become one of the **most flexible and cost-effective AI platforms**, especially with:
+- Large context windows
+- Strong multimodal support
+- Generous free tier
+- Clear upgrade path to production
+
+**Recommended default choice:**  
+👉 Start with **`gemini-2.5-flash`**, then upgrade to **`gemini-3-pro`** only if you need deeper reasoning.
+
+---
+
+## 📚 References
 - https://ai.google.dev/gemini-api/docs/models
 - https://ai.google.dev/gemini-api/docs/pricing
 - https://ai.google.dev/gemini-api/docs/rate-limits
 
 ---
 
-⭐ **Tip:**  
-If you are building **chatbots, healthcare triage, or RAG pipelines**, start with  
-`gemini-2.5-flash` → upgrade to `gemini-2.5-pro` only when needed.
+✍️ *If you build healthcare, RAG, or integration-heavy systems, Gemini Flash + Embeddings offers an excellent balance of performance and cost.*
